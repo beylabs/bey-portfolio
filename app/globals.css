@@ -3,18 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 30 41 59;
-  --background-start-rgb: 248 250 252;
-  --background-end-rgb: 255 255 255;
+  --midnight: #0d2137;
+  --goldAccent: #facc15;
+  --ghost: #f8fafc;
+  --slateC: #1e293b;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  background-color: var(--ghost);
+  color: var(--slateC);
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-@layer base {
-  h1, h2, h3 {
-    @apply font-serif;
-  }
+/* Force the Hero Section to look Premium even if Tailwind fails */
+.bg-midnight {
+  background-color: var(--midnight) !important;
+}
+.text-goldAccent {
+  color: var(--goldAccent) !important;
+}
+.bg-goldAccent {
+  background-color: var(--goldAccent) !important;
 }
