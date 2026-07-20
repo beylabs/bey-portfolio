@@ -1,6 +1,8 @@
 import Hero from '../components/sections/Hero';
 import Impact from '../components/sections/Impact';
 import Vault from '../components/sections/Vault';
+import Contact from '../components/sections/Contact';
+import Footer from '../components/sections/Footer';
 
 export default function Home() {
   return (
@@ -8,11 +10,8 @@ export default function Home() {
       <Hero />
       <Impact />
       <Vault />
-      <footer className="py-12 bg-midnight text-white text-center border-t border-slate-800">
-        <p className="text-sm text-slate-400">
-          © 2026 Pillarcode. Architected by Bey.
-        </p>
-      </footer>
+      <Contact />
+      <Footer />
     </main>
   );
 }
