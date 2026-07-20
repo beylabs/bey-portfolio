@@ -2,7 +2,7 @@ import { PROJECTS } from '../../../constants/projects';
 import { notFound } from 'next/navigation';
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = PROJECTS.find(p => p.title.toLowerCase().replace(/ /g, '-') === params.slug);
+  const project = PROJECTS.find(p => p.slug === params.slug);
 
   if (!project) return notFound();
 

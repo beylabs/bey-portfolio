@@ -1,5 +1,6 @@
 export const PROJECTS = [
   {
+    slug: "nbais-portal",
     title: "NBAIS Headcount Portal",
     role: "Lead Systems Architect",
     description: "A mission-critical human capital management system for government staff tracking.",
@@ -9,6 +10,7 @@ export const PROJECTS = [
     color: "from-blue-600 to-midnight"
   },
   {
+    slug: "nizam-portal",
     title: "Nizam Academic Portal",
     role: "Product Lead",
     description: "Enterprise-grade educational infrastructure for academic record management.",
@@ -18,6 +20,7 @@ export const PROJECTS = [
     color: "from-indigo-600 to-midnight"
   },
   {
+    slug: "birthday-automation",
     title: "Birthday Automation Engine",
     role: "Automation Engineer",
     description: "Event-driven engagement system for institutional morale and staff tracking.",
