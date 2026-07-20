@@ -1,7 +1,15 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+});
 
 export const metadata = {
   title: 'Khalid Sani Umar (Bey) | Digital Transformation Architect',
@@ -10,8 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-ghost text-slateC`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <body className="bg-ghost text-slateC font-sans">
         {children}
       </body>
     </html>
