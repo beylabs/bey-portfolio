@@ -12,8 +12,21 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://bey-portfolio.vercel.app'),
   title: 'Khalid Sani Umar (Bey) | Digital Transformation Architect',
-  description: 'Bridging High-Level Public Administration and AI Engineering.',
+  description: 'Bridging high-level public administration with enterprise software engineering. Specializing in the digital transformation of institutional workflows.',
+  openGraph: {
+    title: 'Khalid Sani Umar (Bey) | Digital Transformation Architect',
+    description: 'Bridging high-level public administration with enterprise software engineering.',
+    url: 'https://bey-portfolio.vercel.app',
+    siteName: 'Khalid Sani Umar',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Khalid Sani Umar (Bey) | Digital Transformation Architect',
+    description: 'Bridging high-level public administration with enterprise software engineering.',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
