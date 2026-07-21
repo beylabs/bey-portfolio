@@ -32,6 +32,14 @@ export const PROJECTS = [
   }
 }`
     },
+    capabilities: [
+      "Staff identity verification and headcount submission",
+      "Examination supervision posting letters, generated per staff member",
+      "Admin dashboard with global search and bulk printing",
+      "CSV export for government reporting",
+      "Full audit logging of every record change",
+      "Passport photo upload and storage"
+    ],
     screenshots: [
       { src: "/screenshots/nbais-landing.jpg", caption: "Staff Headcount 2026 landing page" },
       { src: "/screenshots/nbais-reprint-slip.jpg", caption: "Reprint verification slip form" },
@@ -72,6 +80,15 @@ export const PROJECTS = [
   return false;
 }`
     },
+    capabilities: [
+      "Geofenced attendance with a configurable radius",
+      "Automated daily absence digest emailed to parents and guardians",
+      "Assignment posting and retrieval by class",
+      "Digital ID card generation for students and staff",
+      "AI-assisted analytics via Gemini",
+      "Resumable term archiving that survives execution timeouts",
+      "OTP-based password reset"
+    ],
     screenshots: [
       { src: "/screenshots/nizam-login.jpg", caption: "Academic Portal secure login" },
       { src: "/screenshots/nizam-director-dashboard.jpg", caption: "Director control panel" },

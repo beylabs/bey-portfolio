@@ -75,6 +75,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
 
           <div className="space-y-6">
+            {project.capabilities && project.capabilities.length > 0 && (
+              <div className="bg-white p-6 rounded-xl border border-slate-200">
+                <h4 className="font-bold text-midnight mb-4">Full Capabilities</h4>
+                <ul className="space-y-2">
+                  {project.capabilities.map((cap, i) => (
+                    <li key={i} className="text-sm text-slate-600 flex gap-2">
+                      <span className="text-goldAccent font-bold">•</span>
+                      <span>{cap}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="bg-white p-6 rounded-xl border border-slate-200">
               <h4 className="font-bold text-midnight mb-4">Tech Stack</h4>
               <div className="flex flex-wrap gap-2">
