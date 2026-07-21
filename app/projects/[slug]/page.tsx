@@ -1,5 +1,6 @@
 import { PROJECTS } from '../../../constants/projects';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = PROJECTS.find(p => p.slug === params.slug);
@@ -42,6 +43,27 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   <pre className="p-6 overflow-x-auto text-sm leading-relaxed">
                     <code className="text-slate-300 font-mono">{project.codeSnippet.code}</code>
                   </pre>
+                </div>
+              </section>
+            )}
+
+            {project.screenshots && project.screenshots.length > 0 && (
+              <section>
+                <h3 className="text-xl font-bold text-midnight mb-3">See It In Use</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {project.screenshots.map((shot, i) => (
+                    <div key={i} className="rounded-xl overflow-hidden border border-slate-200 bg-white">
+                      <div className="relative w-full aspect-[9/16]">
+                        <Image
+                          src={shot.src}
+                          alt={shot.caption}
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </div>
+                      <p className="text-xs text-slate-500 p-3 border-t border-slate-100">{shot.caption}</p>
+                    </div>
+                  ))}
                 </div>
               </section>
             )}

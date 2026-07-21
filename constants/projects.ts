@@ -32,6 +32,11 @@ export const PROJECTS = [
   }
 }\`
     },
+    screenshots: [
+      { src: "/screenshots/nbais-landing.jpg", caption: "Staff Headcount 2026 landing page" },
+      { src: "/screenshots/nbais-reprint-slip.jpg", caption: "Reprint verification slip form" },
+      { src: "/screenshots/nbais-custodian-posting.jpg", caption: "Supervision and custodian posting form" }
+    ],
     impact: "94% staff participation (566 of 600+) with zero data loss across simultaneous multi-office deployment.",
     tech: ["Google Apps Script", "LockService", "Google Sheets", "Audit Logging"],
     link: "#",
@@ -67,6 +72,14 @@ export const PROJECTS = [
   return false;
 }\`
     },
+    screenshots: [
+      { src: "/screenshots/nizam-login.jpg", caption: "Academic Portal secure login" },
+      { src: "/screenshots/nizam-director-dashboard.jpg", caption: "Director control panel" },
+      { src: "/screenshots/nizam-student-dashboard.jpg", caption: "Student control panel" },
+      { src: "/screenshots/nizam-result-slip.jpg", caption: "Generated termly result slip" },
+      { src: "/screenshots/nizam-fee-status.jpg", caption: "Fee status view for a student" },
+      { src: "/screenshots/nizam-fees-setup.jpg", caption: "Fee setup and management panel" }
+    ],
     impact: "100% paperless operations for Directors, Teachers, and Students in active production use.",
     tech: ["Google Apps Script", "Firebase Firestore", "Chart.js", "Gemini API"],
     link: "#",
@@ -93,6 +106,9 @@ function markAsSent(staffId) {
   props.setProperty(key, "true");
 }\`
     },
+    screenshots: [
+      { src: "/screenshots/birthday_email_redacted.png", caption: "A real birthday email as received, recipient details blurred for privacy" }
+    ],
     impact: "100% zero-touch automation for staff engagement across the Kano Zone.",
     tech: ["Google Apps Script", "Time-Driven Triggers", "HTML Email Templates"],
     link: "#",
