@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -35,6 +36,16 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+
+      <motion.a
+        href="#about"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-500 hover:text-goldAccent transition-colors z-10"
+        aria-label="Scroll to About section"
+      >
+        <ChevronDown size={28} />
+      </motion.a>
     </section>
   );
 }
