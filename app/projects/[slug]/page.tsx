@@ -30,6 +30,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </p>
             </section>
 
+            {project.codeSnippet && (
+              <section>
+                <h3 className="text-xl font-bold text-midnight mb-3">{project.codeSnippet.label}</h3>
+                <div className="bg-midnight rounded-xl overflow-hidden">
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
+                    <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500/60"></div>
+                  </div>
+                  <pre className="p-6 overflow-x-auto text-sm leading-relaxed">
+                    <code className="text-slate-300 font-mono">{project.codeSnippet.code}</code>
+                  </pre>
+                </div>
+              </section>
+            )}
+
             <section className="bg-midnight text-white p-8 rounded-2xl">
               <h3 className="text-xl font-bold text-goldAccent mb-3">Quantifiable Result</h3>
               <p className="text-lg italic leading-relaxed">{project.impact}</p>
