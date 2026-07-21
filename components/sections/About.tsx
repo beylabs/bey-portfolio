@@ -23,13 +23,13 @@ export default function About() {
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
               I lead administration and HR operations for a federal government institution
-              in Nigeria — and I build the software that runs it. Over the past three years,
+              in Nigeria, and I build the software that runs it. Over the past three years,
               I've designed and deployed three live systems now used daily by government
               staff, students, and institutional stakeholders across multiple state offices.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Most people in senior public-sector roles delegate the technical work.
-              I write it myself — from atomic concurrency handling in a multi-office
+              Most people in senior public sector roles delegate the technical work.
+              I write it myself, from atomic concurrency handling in a multi-office
               headcount portal, to salted password hashing and session persistence in a
               live school management platform. That combination is rare, and it's the
               lens I bring to every system I build: institutional constraints, engineered properly.
