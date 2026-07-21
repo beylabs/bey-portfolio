@@ -8,7 +8,7 @@ export const PROJECTS = [
     codeSnippet: {
       label: "Atomic reference number generation under concurrent load",
       language: "javascript",
-      code: \`function generateReferenceNumber() {
+      code: `function generateReferenceNumber() {
   const lock = LockService.getScriptLock();
   lock.waitLock(30000);
 
@@ -30,7 +30,7 @@ export const PROJECTS = [
   } finally {
     lock.releaseLock();
   }
-}\`
+}`
     },
     screenshots: [
       { src: "/screenshots/nbais-landing.jpg", caption: "Staff Headcount 2026 landing page" },
@@ -51,7 +51,7 @@ export const PROJECTS = [
     codeSnippet: {
       label: "Password hashing with live migration for legacy plaintext entries",
       language: "javascript",
-      code: \`function verifyPassword(inputPassword, storedValue) {
+      code: `function verifyPassword(inputPassword, storedValue) {
   const salt = PropertiesService.getScriptProperties()
     .getProperty("PASSWORD_SALT");
 
@@ -70,7 +70,7 @@ export const PROJECTS = [
   }
 
   return false;
-}\`
+}`
     },
     screenshots: [
       { src: "/screenshots/nizam-login.jpg", caption: "Academic Portal secure login" },
@@ -94,7 +94,7 @@ export const PROJECTS = [
     codeSnippet: {
       label: "Per-year deduplication to prevent repeat birthday emails",
       language: "javascript",
-      code: \`function hasAlreadySentThisYear(staffId) {
+      code: `function hasAlreadySentThisYear(staffId) {
   const props = PropertiesService.getScriptProperties();
   const key = "sent_" + staffId + "_" + new Date().getFullYear();
   return props.getProperty(key) !== null;
@@ -104,7 +104,7 @@ function markAsSent(staffId) {
   const props = PropertiesService.getScriptProperties();
   const key = "sent_" + staffId + "_" + new Date().getFullYear();
   props.setProperty(key, "true");
-}\`
+}`
     },
     screenshots: [
       { src: "/screenshots/birthday_email_redacted.png", caption: "A real birthday email as received, recipient details blurred for privacy" }
