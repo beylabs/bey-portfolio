@@ -138,6 +138,13 @@ export const PROJECTS = [
       "Calendar sync with automatic staff invite on approval",
       "Automated return-to-duty reminders and status closeout"
     ],
+    screenshots: [
+      { src: "/screenshots/leave-new-request-redacted.png", caption: "New leave request notification, awaiting Head of Unit review" },
+      { src: "/screenshots/leave-hou-recommended-redacted.png", caption: "Head of Unit recommendation, routed to Administration" },
+      { src: "/screenshots/leave-admin-cleared-redacted.png", caption: "Admin clearance, routed to Zonal Coordinator for final approval" },
+      { src: "/screenshots/leave-final-decision-redacted.png", caption: "Final decision notification with full approval history" },
+      { src: "/screenshots/leave-letter-redacted.png", caption: "Auto-generated official leave approval letter" }
+    ],
     impact: "Replaced a fully manual, paper-based leave process for a 500+ staff workforce with a fully automated, auditable digital workflow.",
     tech: ["Google Apps Script", "Google Forms", "Google Docs API", "Google Calendar API"],
     link: "#",
