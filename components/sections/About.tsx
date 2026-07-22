@@ -1,9 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
+import { PROJECTS } from "../../constants/projects";
 
 const STATS = [
   { value: "6+", label: "Years in Public Administration & Digital Transformation" },
-  { value: "3", label: "Live Institutional Systems Designed & Deployed" },
+  { value: String(PROJECTS.length), label: "Live Institutional Systems Designed & Deployed" },
   { value: "75%", label: "Reduction in Manual Administrative Workload" },
   { value: "500+", label: "Staff Served Across Zonal Operations" },
 ];
@@ -23,9 +24,9 @@ export default function About() {
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
               I lead administration and HR operations for a federal government institution
-              in Nigeria, and I build the software that runs it. Over the past three years,
-              I've designed and deployed three live systems now used daily by government
-              staff, students, and institutional stakeholders across multiple state offices.
+              in Nigeria, and I build the software that runs it. I've designed and deployed
+              {" "}{PROJECTS.length} live systems now used daily by government staff, students,
+              and institutional stakeholders across multiple state offices.
             </p>
             <p className="text-slate-600 leading-relaxed">
               Most people in senior public sector roles delegate the technical work.
