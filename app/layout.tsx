@@ -29,9 +29,37 @@ export const metadata = {
   },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Khalid Sani Umar",
+  "alternateName": "Bey",
+  "url": "https://bey-portfolio.vercel.app",
+  "jobTitle": "Digital Transformation Architect",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "National Board for Arabic and Islamic Studies (NBAIS)"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kano",
+    "addressCountry": "NG"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/sanikhalidumar",
+    "https://github.com/beylabs"
+  ]
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body className="bg-ghost text-slateC font-sans">
         {children}
       </body>
