@@ -15,9 +15,9 @@ export default function Impact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {PROJECTS.map((proj, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               whileHover={{ y: -10 }}
               className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all group"
@@ -26,7 +26,7 @@ export default function Impact() {
               <h3 className="text-2xl font-bold text-midnight mb-2">{proj.title}</h3>
               <p className="text-goldAccent font-mono text-xs uppercase tracking-tighter mb-4">{proj.role}</p>
               <p className="text-slate-600 mb-6 leading-relaxed">{proj.description}</p>
-              
+
               <div className="bg-slate-50 p-4 rounded-lg mb-6 border-l-4 border-goldAccent">
                 <p className="text-sm font-bold text-midnight mb-1">Key Result:</p>
                 <p className="text-sm text-slate-600 italic">{proj.impact}</p>

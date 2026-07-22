@@ -103,6 +103,47 @@ export const PROJECTS = [
     color: "from-indigo-600 to-midnight"
   },
   {
+    slug: "leave-management",
+    title: "Online Leave Application & Approval System",
+    role: "Systems Architect",
+    description: "A digitised leave management system replacing a fully manual paper process, built on Google Forms, Apps Script, and Google Sheets.",
+    engineeringWin: "Uses spreadsheet column edits as a state machine to drive a three-stage sequential approval chain, Head of Unit, Administration, then Zonal Coordinator, with each notification email carrying the cumulative approval history so no approver has to hunt for prior remarks. A daily maintenance trigger automatically sends return-to-duty reminders and closes out completed leave records with no manual follow-up.",
+    codeSnippet: {
+      label: "Column-edit state machine driving sequential chain-of-command approval",
+      language: "javascript",
+      code: `function onEditTrigger(e) {
+  const sheet = e.range.getSheet();
+  if (sheet.getName() !== CONFIG.SHEET_NAME) return;
+
+  const col = e.range.getColumn();
+  const row = e.range.getRow();
+  const rowVals = sheet.getRange(row, 1, 1, C.STATUS_COL).getValues()[0];
+
+  // Each stage only fires on its own column, so an edit anywhere
+  // else on the row can never skip or repeat a step in the chain.
+  if (col === C.HOU_REC) {
+    notifyNextApprover(CONFIG.ADMIN_EMAILS, rowVals, "Awaiting Admin Review");
+  } else if (col === C.ADMIN_DECISION) {
+    notifyNextApprover([CONFIG.ZC_EMAIL], rowVals, "Awaiting Final Approval");
+  } else if (col === C.ZONAL_DECISION) {
+    finalizeDecision(sheet, row, rowVals);
+  }
+}`
+    },
+    capabilities: [
+      "Online application via Google Form with attached passport photo and supporting document",
+      "Three-stage sequential approval chain: Head of Unit, Administration, Zonal Coordinator",
+      "Cumulative approval history included in every notification email",
+      "Auto-generated official leave letter from a Google Docs template on final decision",
+      "Calendar sync with automatic staff invite on approval",
+      "Automated return-to-duty reminders and status closeout"
+    ],
+    impact: "Replaced a fully manual, paper-based leave process for a 500+ staff workforce with a fully automated, auditable digital workflow.",
+    tech: ["Google Apps Script", "Google Forms", "Google Docs API", "Google Calendar API"],
+    link: "#",
+    color: "from-emerald-600 to-midnight"
+  },
+  {
     slug: "birthday-automation",
     title: "Staff Engagement Automation",
     role: "Automation Engineer",
