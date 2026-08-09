@@ -171,6 +171,13 @@ function markAsSent(staffId) {
   props.setProperty(key, "true");
 }`
     },
+    capabilities: [
+      "Fully automated daily trigger, no manual step to send a message",
+      "Custom HTML email template with cross-client rendering fixes",
+      "HTML-entity-encoded emoji to prevent broken characters on Android mail clients",
+      "Robust DD/MM/YYYY date parsing to correctly match birthdays",
+      "Per-year deduplication so no staff member receives a duplicate message"
+    ],
     screenshots: [
       { src: "/screenshots/birthday_email_redacted.png", caption: "A real birthday email as received, recipient details blurred for privacy" }
     ],
