@@ -16,10 +16,10 @@ export default function Hero() {
           <span className="text-goldAccent font-mono text-sm tracking-widest uppercase mb-4 block">
             Administration, HR & Digital Transformation
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-serif">
-            I Build The Systems <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
-              My Institution Runs On
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight font-serif">
+            I Build The Systems My<br className="hidden sm:block" />
+            {" "}<span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+              Institution Runs On
             </span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
