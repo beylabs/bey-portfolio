@@ -13,19 +13,19 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   metadataBase: new URL('https://bey-portfolio.vercel.app'),
-  title: 'Khalid Sani Umar (Bey) | Digital Transformation Architect',
-  description: 'Bridging high-level public administration with enterprise software engineering. Specializing in the digital transformation of institutional workflows.',
+  title: 'Khalid Sani Umar | Administration, HR & Digital Transformation Professional',
+  description: 'Senior administration and HR professional who personally builds the production systems his institution runs on. Four live government and education platforms, real code, real screenshots.',
   openGraph: {
-    title: 'Khalid Sani Umar (Bey) | Digital Transformation Architect',
-    description: 'Bridging high-level public administration with enterprise software engineering.',
+    title: 'Khalid Sani Umar | Administration, HR & Digital Transformation Professional',
+    description: 'Senior administration and HR professional who personally builds the production systems his institution runs on.',
     url: 'https://bey-portfolio.vercel.app',
     siteName: 'Khalid Sani Umar',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Khalid Sani Umar (Bey) | Digital Transformation Architect',
-    description: 'Bridging high-level public administration with enterprise software engineering.',
+    title: 'Khalid Sani Umar | Administration, HR & Digital Transformation Professional',
+    description: 'Senior administration and HR professional who personally builds the production systems his institution runs on.',
   },
 };
 
@@ -35,7 +35,7 @@ const personSchema = {
   "name": "Khalid Sani Umar",
   "alternateName": "Bey",
   "url": "https://bey-portfolio.vercel.app",
-  "jobTitle": "Digital Transformation Architect",
+  "jobTitle": "Administration, HR & Digital Transformation Professional",
   "worksFor": {
     "@type": "Organization",
     "name": "National Board for Arabic and Islamic Studies (NBAIS)"

@@ -31,7 +31,7 @@ export default function OpengraphImage() {
             marginBottom: 24,
           }}
         >
-          The Intersection of Governance &amp; AI
+          Administration, HR &amp; Digital Transformation
         </div>
         <div
           style={{
@@ -51,7 +51,7 @@ export default function OpengraphImage() {
             textAlign: 'center',
           }}
         >
-          Digital Transformation Architect
+          Four Production Systems. Real Code. Verified Impact.
         </div>
       </div>
     ),
