@@ -1,5 +1,6 @@
 import './globals.css';
 import { Inter, Playfair_Display } from 'next/font/google';
+import MotionWrapper from '../components/MotionWrapper';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -61,7 +62,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-ghost text-slateC font-sans">
-        {children}
+        <MotionWrapper>
+          {children}
+        </MotionWrapper>
       </body>
     </html>
   );
