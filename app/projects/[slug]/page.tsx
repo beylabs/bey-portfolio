@@ -20,12 +20,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="md:col-span-2 space-y-8">
             <section>
-              <h3 className="text-xl font-bold text-midnight mb-3">The Challenge</h3>
+              <h2 className="text-xl font-bold text-midnight mb-3">The Challenge</h2>
               <p className="text-slate-600 leading-relaxed">{project.description}</p>
             </section>
 
             <section>
-              <h3 className="text-xl font-bold text-midnight mb-3">The Engineering Win</h3>
+              <h2 className="text-xl font-bold text-midnight mb-3">The Engineering Win</h2>
               <p className="text-slate-600 leading-relaxed">
                 {project.engineeringWin}
               </p>
@@ -33,7 +33,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             {project.codeSnippet && (
               <section>
-                <h3 className="text-xl font-bold text-midnight mb-3">{project.codeSnippet.label}</h3>
+                <h2 className="text-xl font-bold text-midnight mb-3">{project.codeSnippet.label}</h2>
                 <div className="bg-midnight rounded-xl overflow-hidden">
                   <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
                     <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
@@ -49,7 +49,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             {project.screenshots && project.screenshots.length > 0 && (
               <section>
-                <h3 className="text-xl font-bold text-midnight mb-3">See It In Use</h3>
+                <h2 className="text-xl font-bold text-midnight mb-3">See It In Use</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {project.screenshots.map((shot, i) => (
                     <div key={i} className="rounded-xl overflow-hidden border border-slate-200 bg-white">
@@ -69,7 +69,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             )}
 
             <section className="bg-midnight text-white p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-goldAccent mb-3">Quantifiable Result</h3>
+              <h2 className="text-xl font-bold text-goldAccent mb-3">Quantifiable Result</h2>
               <p className="text-lg italic leading-relaxed">{project.impact}</p>
             </section>
           </div>
@@ -77,7 +77,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <div className="space-y-6">
             {project.capabilities && project.capabilities.length > 0 && (
               <div className="bg-white p-6 rounded-xl border border-slate-200">
-                <h4 className="font-bold text-midnight mb-4">Full Capabilities</h4>
+                <h3 className="font-bold text-midnight mb-4">Full Capabilities</h3>
                 <ul className="space-y-2">
                   {project.capabilities.map((cap, i) => (
                     <li key={i} className="text-sm text-slate-600 flex gap-2">
@@ -90,7 +90,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             )}
 
             <div className="bg-white p-6 rounded-xl border border-slate-200">
-              <h4 className="font-bold text-midnight mb-4">Tech Stack</h4>
+              <h3 className="font-bold text-midnight mb-4">Tech Stack</h3>
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((t, i) => (
                   <span key={i} className="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">

@@ -27,7 +27,7 @@ export default function Vault() {
               className="p-4 border border-slate-100 rounded-xl bg-ghost hover:border-goldAccent transition-colors group"
             >
               <p className="text-xs font-bold text-goldAccent uppercase mb-1">{cert.category}</p>
-              <h4 className="text-sm font-bold text-midnight group-hover:text-blue-600 transition-colors">{cert.name}</h4>
+              <h3 className="text-sm font-bold text-midnight group-hover:text-blue-600 transition-colors">{cert.name}</h3>
               <p className="text-[10px] text-slate-400 mt-1">{cert.issuer}</p>
             </motion.div>
           ))}
