@@ -19,7 +19,7 @@ export default function About() {
             <span className="text-goldAccent font-mono text-xs tracking-widest uppercase mb-3 block">
               About
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-midnight font-serif mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-midnight font-serif mb-6 leading-tight">
               Where public administration meets production code.
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
