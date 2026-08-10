@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Impact() {
   return (
-    <section className="py-24 bg-ghost" id="impact">
+    <section className="py-24 bg-ghost border-t border-slate-200" id="impact">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-midnight font-serif mb-4">Measured Impact</h2>
